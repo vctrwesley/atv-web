@@ -52,6 +52,7 @@ function gerarBola(cor) {
 
   bola.addEventListener("click", function () {
     if (cor === 1) {
+      document.getElementById("bolha-estoura").play();
       eliminarBola(bola);
       gerarBola(Math.floor(Math.random() * 3) + 1);
     }
@@ -59,6 +60,7 @@ function gerarBola(cor) {
 
   bola.addEventListener("mouseover", function () {
     if (cor === 2) {
+      document.getElementById("bolha-estoura").play();
       eliminarBola(bola);
       pontuar();
     } else if (cor === 3) {
@@ -114,6 +116,7 @@ document.addEventListener("keydown", function (event) {
   if (event.key === "d") {
     const primeiraBolaVerde = jogo.querySelector(".bola-verde");
     if (primeiraBolaVerde) {
+      document.getElementById("bolha-estoura").play();
       eliminarBola(primeiraBolaVerde);
       gerarBola(Math.floor(Math.random() * 3) + 1);
     }

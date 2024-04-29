@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    background-image: url(./img/img-fundo.png);
+    background-image: url(./assets/img/img-fundo.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -53,17 +53,17 @@ body {
 }
 
 .bola-azul {
-    background-image: url(./img/bolha-1.png);
+    background-image: url(./assets/img/bolha-1.png);
     background-size: cover;;
 }
 
 .bola-rosa {
-    background-image: url(./img/bolha-2.png);
+    background-image: url(./assets/img/bolha-2.png);
     background-size: cover;;
 }
 
 .bola-verde {
-    background-image: url(./img/bolha.png);
+    background-image: url(./assets/img/bolha.png);
     background-size: cover;;
 }
 
@@ -120,8 +120,8 @@ body {
 }
 
 .img-logo{
-    margin-top: 50px;
-   width: 50%;
+    margin-top: 45px;
+   width: 45%;
 }
 
 .text-start{
@@ -134,6 +134,7 @@ body {
     font-size: 32px;
     font-weight: 700;
     text-decoration: none;
+    margin-bottom: 8px;
 }
 
 .title-start:hover{
@@ -143,6 +144,57 @@ body {
     transition: 0.5s;
 }
 
-.title-start img{
-    width: 18px;
+#bolha-estoura{
+    display: none;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid var(--azul-black);
+    border-radius: 8px;
+    z-index: 9999;
+    max-width: 120%;
+    max-height: 80%; 
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .tutorial {
+    text-align: center;
+  }
+
+  .descricao {
+    text-align: start;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .popup .btn {
+    margin-top: 24px;
+    margin-bottom: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .popup h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0D1A46;
+  }
+
+  .copy{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f0f0f0;
+  }

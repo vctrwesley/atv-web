@@ -4,22 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bubble</title>
-    <link rel="icon" type="image/x-icon" href="./img/icon.svg">
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <main>
+      <audio autoplay loop>
+        <source
+          src="./assets/audio/Bubble-Bobble-ArcadeMusic.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
       <section class="start">
         <div class="start-container">
-          <img src="./img/logo-bubble.png" alt="" class="img-logo" />
+          <img src="./assets/img/logo-bubble.png" alt="" class="img-logo" />
           <div class="text-start">
-            <a href="./bubble.html" class="title-start"
-              >PRESS START
-            </a>
+            <a href="./bubble.html" class="title-start">PRESS START </a>
           </div>
+          <div>
+            <a onclick="exibirPopup('popup')" class="title-start">TUTORIAL</a>
+            <div id="popup" class="popup">
+              <div class="tutorial">
+                <h1>Como Jogar</h1>
+                <div class="descricao">
+                  <ul>
+                    <li>O objetivo do jogo é marcar o máximo de pontos possível ao estourar as bolhas que aparecem na tela.</li>
+                    <li>Clique nas bolhas azuis e passe o cursor nas rosas para estourá-las e ganhar pontos.</li>
+                    <li>Evite clicar nas bolhas verdes, pois você perderá pontos.</li>
+                    <li>Use a tecla "D" do teclado para remover uma bolha verde da tela e continuar jogando.</li>
+                    <li>O jogo dura 30 segundos. Tente marcar o maior número de pontos antes que o tempo acabe!</li>
+                  </ul>
+                </div>
+                <button class="btn" onclick="fecharPopup('popup')">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <span> &copy; Victor Wesley - Todos os Direitos Reservados</span>
         </div>
       </section>
     </main>
+
+    <script>
+      // Reproduzir música automaticamente quando a página é carregada...
+      window.addEventListener("DOMContentLoaded", function () {
+        var audio = document.querySelector("audio");
+        audio.play();
+      });
+    </script>
+    <script src="./pop-up.js"></script>
   </body>
 </html>
