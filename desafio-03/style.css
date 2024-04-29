@@ -1,0 +1,148 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-image: url(./img/img-fundo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #0D1A46;
+    color: #f0f0f0;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 90px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f0f0f0;
+}
+
+#jogo {
+    width: 700px;
+    height: 340px;
+    background-color: #f0f0f0;
+    border: 1px solid #353535;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.bola {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.bola-azul {
+    background-image: url(./img/bolha-1.png);
+    background-size: cover;;
+}
+
+.bola-rosa {
+    background-image: url(./img/bolha-2.png);
+    background-size: cover;;
+}
+
+.bola-verde {
+    background-image: url(./img/bolha.png);
+    background-size: cover;;
+}
+
+#pontuacao, #tempo {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.menu-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: #0D1A46;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 24px;
+    display: none;
+}
+
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover{
+    background-color: #EFD187;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.start{
+    width: 100%;
+}
+
+.start-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.img-logo{
+    margin-top: 50px;
+   width: 50%;
+}
+
+.text-start{
+    display: flex;
+    align-items: center;
+}
+
+.title-start{
+    color: #A8E65D;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.title-start:hover{
+    color: #EFD187;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.title-start img{
+    width: 18px;
+}
