@@ -42,16 +42,21 @@
           </div>
         </div>
         <div class="copy">
-          <span> &copy; Victor Wesley - Todos os Direitos Reservados</span>
+          <span> &copy; Victor Wesley 2024 - Todos os Direitos Reservados</span>
         </div>
       </section>
     </main>
 
     <script>
-      // Reproduzir música automaticamente quando a página é carregada...
-      window.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", function () {
         var audio = document.querySelector("audio");
-        audio.play();
+
+        function playAudio() {
+          audio.play();
+          document.removeEventListener("click", playAudio);
+        }
+
+        document.addEventListener("click", playAudio);
       });
     </script>
     <script src="./pop-up.js"></script>

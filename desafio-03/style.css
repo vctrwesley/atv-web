@@ -197,4 +197,9 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #f0f0f0;
+    text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
   }
