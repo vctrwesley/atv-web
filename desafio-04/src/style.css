@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('./assets/imagem/bg2.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.game-container {
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    flex: 2;
+}
+
+input[type="number"] {
+    padding: 10px;
+    width: 90%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #d1b200, #bf7c01);
+    transition: background 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #D4AF37, #C5A358);
+}
+
+
+button:disabled {
+    background-color: #ccc;
+}
+
+.dificuldade-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 24px;
+
+    button {
+        width: 150px;
+    }
+}
+
+#message {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.high {
+    color: red;
+}
+
+.low {
+    color: blue;
+}
+
+.correct {
+    color: green;
+}
+
+.near {
+    color: orange;
+}
+
+.difficulty-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#chosenNumbers {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+}
+
+
+#kassaNikel {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.digit {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.history-container {
+    flex: 1;
+    margin-left: 20px;
+    background-color: #FAFAFA;
+}
+
+.popup {
+    position: fixed;
+    width: 450px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FAFAFA;
+    border: 1px solid #0F1212;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input[type="text"] {
+        padding: 10px;
+        width: 90%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+}
+
+.popup button {
+    margin-top: 10px;
+}
+
+.form-name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.tbn-popup {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-container" id="difficultySelection">
+            <h1>Escolha a Dificuldade</h1>
+            <div class="dificuldade-container">
+                <button class="difficulty-btn" data-max="15" data-difficulty="Fácil">
+                    Fácil (1-15)
+                </button>
+                <button class="difficulty-btn" data-max="25" data-difficulty="Média">
+                    Média (1-25)
+                </button>
+                <button class="difficulty-btn" data-max="50" data-difficulty="Difícil">
+                    Difícil (1-50)
+                </button>
+            </div>
+        </div>
+
+        <div class="game-container" id="gamePlay" style="display: none;">
+            <h1>Lucky Wheel Numbers</h1>
+            <p id="difficultyDisplay">Dificuldade:</p>
+            <p>Adivinhe o número!</p>
+            
+            <input type="number" id="guessInput" placeholder="Digite um número">
+            
+            <p id="message"></p>
+
+            <div id="kassaNikel">
+                <div class="digit">-</div>
+                <div class="digit">-</div>
+                <div class="digit">-</div>
+            </div>
+
+            <p>
+                Tentativas restantes: 
+                <span id="attemptsLeft">3</span>
+            </p>
+            <button id="submitGuess">Enviar Palpite</button>
+            
+            <button id="restartGame" style="display: none;">Reiniciar Jogo</button>
+            <button id="changeDifficulty" style="display: none;">Trocar Dificuldade</button>
+        </div>
+
+        <!-- Seção de histórico -->
+        <div class="history-container" id="historyContainer" style="display: none;">
+            <h2>Histórico de Jogos</h2>
+            <ul id="historyList"></ul>
+            <button id="clearHistory" style="display: none;">Limpar Histórico</button>
+        </div>
+    </div>
+
+    <!-- Pop-up para salvar a partida -->
+    <div id="savePopup" class="popup" style="display: none;">
+        <div class="form-name">
+            <h2>Salvar Partida</h2>
+            <label for="saveName">Nome para a partida:</label>
+            <input type="text" id="saveName" placeholder="Digite um nome">
+        </div>
+        <div class="tbn-popup">
+            <button id="saveGame">Salvar</button>
+            <button id="closePopup">Fechar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
