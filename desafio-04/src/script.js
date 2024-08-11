@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         guessInput.value = '';
         attemptsLeft.textContent = attempts;
         resetDigits();
-        submitGuess.style.display = 'inline'; // Show button
+        submitGuess.style.display = 'inline';
         guessInput.disabled = false;
         restartGame.style.display = 'none';
         changeDifficulty.style.display = 'none';
@@ -47,15 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         difficultySelection.style.display = 'none';
         gamePlay.style.display = 'block';
-        historyContainer.style.display = 'block'; // Show history container
-        clearHistory.style.display = 'inline'; // Show clear history button
-        loadHistory(); // Load and display the history
+        historyContainer.style.display = 'block';
+        clearHistory.style.display = 'inline';
+        loadHistory();
     }
 
     submitGuess.addEventListener('click', () => {
         const userGuess = parseInt(guessInput.value);
 
-        // Clear input after submission
         guessInput.value = '';
 
         if (isNaN(userGuess) || userGuess < 1 || userGuess > maxNumber) {
@@ -117,14 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
     changeDifficulty.addEventListener('click', () => {
         difficultySelection.style.display = 'block';
         gamePlay.style.display = 'none';
-        historyContainer.style.display = 'none'; // Hide history container
+        historyContainer.style.display = 'none';
     });
 
     saveGameButton.addEventListener('click', () => {
         const saveName = saveNameInput.value.trim();
         if (saveName) {
             saveGameHistory(saveName);
-            saveNameInput.value = ''; // Clear input
+            saveNameInput.value = '';
             savePopup.style.display = 'none';
             gamePlay.style.display = 'block';
         }
@@ -137,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     clearHistory.addEventListener('click', () => {
         localStorage.removeItem('gameHistory');
-        loadHistory(); // Clear history from the display
+        loadHistory();
     });
 
     function celebrate() {
@@ -146,17 +145,17 @@ document.addEventListener('DOMContentLoaded', () => {
             spread: 70,
             origin: { y: 0.6 },
             shapes: ['circle'],
-            colors: ['#FFD700'] // Color of the "coins"
+            colors: ['#FFD700']
         });
     }
 
     function endGame(won) {
-        submitGuess.style.display = 'none'; // Hide button
+        submitGuess.style.display = 'none';
         guessInput.disabled = true;
         restartGame.style.display = 'inline';
         changeDifficulty.style.display = 'inline';
-        savePopup.style.display = 'block'; // Show pop-up
-        gamePlay.style.display = 'none'; // Hide game play
+        savePopup.style.display = 'block';
+        gamePlay.style.display = 'none';
         savePopup.querySelector('h2').textContent = won ? 'Parabéns! Salve sua Vitória!' : 'Você perdeu! Salve seu Jogo!';
     }
 
@@ -195,6 +194,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Load history on page load
     loadHistory();
 });
