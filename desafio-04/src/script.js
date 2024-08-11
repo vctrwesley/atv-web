@@ -83,7 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const difference = Math.abs(userGuess - randomNumber);
 
-        if (difference <= 2) {
+        if (difference >= 5) {
+            if (userGuess > randomNumber) {
+                message.textContent = 'Muito alto! Tente novamente.';
+                message.className = 'high';
+            } else {
+                message.textContent = 'Muito baixo! Tente novamente.';
+                message.className = 'low';
+            }
+        } else if (difference <= 2) {
             if (userGuess > randomNumber) {
                 message.textContent = 'Quase lá! Tente um valor um pouco mais baixo.';
                 message.className = 'near high';
@@ -91,12 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 message.textContent = 'Quase lá! Tente um valor um pouco mais alto.';
                 message.className = 'near low';
             }
-        } else if (userGuess > randomNumber) {
-            message.textContent = 'Muito alto! Tente novamente.';
-            message.className = 'high';
-        } else {
-            message.textContent = 'Muito baixo! Tente novamente.';
-            message.className = 'low';
         }
 
         attemptsLeft.textContent = attempts;
