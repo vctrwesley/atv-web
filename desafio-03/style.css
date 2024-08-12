@@ -159,7 +159,7 @@ body {
     padding: 20px;
     border: 2px solid var(--azul-black);
     border-radius: 8px;
-    z-index: 9999;
+    z-index: 5;
     max-width: 120%;
     max-height: 80%; 
     overflow-y: auto;
