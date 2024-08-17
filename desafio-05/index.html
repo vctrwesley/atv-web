@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
     <div class="container">
-        <div class="sidebar-list">
+        <div class="sidebar-list" id="sidebar">
+            <div class="container-logo">
+                <h2>To Do List</h2>
+                <button class="close-btn" onclick="toggleSidebar()">×</button>
+            </div>
             <ul id="taskLists">
                 <li class="active" onclick="changeList('Lista Padrão')">
                     Lista Padrão 
