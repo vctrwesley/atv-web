@@ -13,7 +13,7 @@
             <ul id="taskLists">
                 <li class="active" onclick="changeList('Lista Padrão')">
                     Lista Padrão 
-                    <i class="fas fa-trash" onclick="deleteList(event, 'Lista Padrão')"></i>
+                    <i class="fas fa-trash" onclick="openConfirmDeleteModal('Lista Padrão')"></i>
                 </li>
             </ul>
             <button onclick="addNewList()">+ Nova Lista</button>
@@ -43,7 +43,7 @@
         <div class="modal-content">
             <span class="close" onclick="closeConfirmDeleteModal()">&times;</span>
             <h2>Confirmar Exclusão</h2>
-            <p>Tem certeza que deseja apagar a lista "<span id="listNameToDelete"></span>"?</p>
+            <p>Tem certeza que deseja apagar a lista <span id="listNameToDelete"></span>?</p>
             <button onclick="confirmDelete()">Confirmar</button>
             <button onclick="closeConfirmDeleteModal()">Cancelar</button>
         </div>

@@ -106,14 +106,17 @@ function changeList(listName) {
     currentList = listName;
     document.getElementById('currentListTitle').textContent = listName;
 
-    document.querySelectorAll('.sidebar-list ul li').forEach(li => {
+    // Remove a classe 'active' de todas as listas
+    const listItems = document.querySelectorAll('.sidebar-list ul li');
+    listItems.forEach(li => {
         li.classList.remove('active');
     });
-    document.querySelectorAll('.sidebar-list ul li').forEach(li => {
-        if (li.textContent === listName) {
-            li.classList.add('active');
-        }
-    });
+
+    // Adiciona a classe 'active' à lista selecionada
+    const selectedListItem = Array.from(listItems).find(li => li.textContent.includes(listName));
+    if (selectedListItem) {
+        selectedListItem.classList.add('active');
+    }
 
     renderTasks();
 }
