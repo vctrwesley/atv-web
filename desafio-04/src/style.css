@@ -6,7 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-image: url("./assets/imagem/bg0.png");
+  background-image: url("./assets/imagem/red-bg.png");
   background-size: cover;
   background-position: center;
 }
@@ -32,7 +32,7 @@ input[type="number"] {
 
 button {
   padding: 10px 20px;
-  background: linear-gradient(45deg, #d1b200, #bf7c01);
+  background: linear-gradient(45deg, #ba9e00, #d28900);
   transition: background 0.3s ease;
   border: none;
   border-radius: 5px;
@@ -85,7 +85,7 @@ button:disabled {
   display: block;
   margin: 10px auto;
   padding: 10px;
-  background-color: #28a745;
+  background-color: linear-gradient(45deg, #ba9e00, #d28900);
   color: #f0f0f0;
   border: none;
   border-radius: 5px;
