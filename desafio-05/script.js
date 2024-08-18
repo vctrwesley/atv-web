@@ -156,7 +156,7 @@ function createNewList() {
         li.onclick = function() { changeList(newListName); };
 
         const trashIcon = document.createElement('i');
-        trashIcon.className = 'fas fa-trash';
+        trashIcon.className = 'fas fa-trash trash-icon';
         trashIcon.onclick = function(event) {
             event.stopPropagation();
             openConfirmDeleteModal(newListName);
