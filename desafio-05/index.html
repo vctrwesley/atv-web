@@ -21,17 +21,21 @@
                     <i class="fas fa-trash trash-icon" onclick="openConfirmDeleteModal('Lista Padrão')"></i>
                 </li>
             </ul>
-            <button onclick="addNewList()">+ Nova Lista</button>
+            <button class="btn" onclick="addNewList()">+ Nova Lista</button>
         </div>
         <div class="main-content">
             <h2 id="currentListTitle">Lista Padrão</h2>
-            <input type="text" id="searchInput" placeholder="Buscar Tarefas...">
-            <ul id="taskList"></ul>
-            <button id="addTaskButton" onclick="toggleTaskInput()">Adicionar Tarefa</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="&#xf002; Buscar Tarefa" class="fa">
+            </div>
+            <div class="lista-tarefas">
+                <ul id="taskList"></ul>
+            </div>
+            <button class="btn" id="addTaskButton" onclick="toggleTaskInput()">+</button>
             <div id="taskInputContainer" style="display: none;">
                 <input type="checkbox" id="taskComplete">
-                <input type="text" id="taskInput" placeholder="Digite a tarefa...">
-                <button onclick="addTask()">Confirmar</button>
+                <input type="text" id="taskInput" placeholder="Digite a tarefa">
+                <button class="btn" onclick="addTask()">Adicionar</button>
             </div>
         </div>
     </div>

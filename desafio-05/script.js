@@ -46,12 +46,29 @@ function renderTasks() {
     });
 }
 
+function toggleTaskInput() {
+    const addTaskButton = document.getElementById('addTaskButton');
+    const taskInputContainer = document.getElementById('taskInputContainer');
+    const taskInput = document.getElementById('taskInput');
+
+    if (taskInputContainer.style.display === 'none') {
+        taskInputContainer.style.display = 'block';
+        addTaskButton.style.display = 'none';
+        taskInput.focus(); // Focar automaticamente no campo de entrada
+    } else {
+        taskInputContainer.style.display = 'none';
+        addTaskButton.style.display = 'block';
+    }
+}
+
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskComplete = document.getElementById('taskComplete');
+    const currentList = 'Lista Padrão'; // Substitua pelo valor correto
+    const taskLists = {}; // Substitua pelo valor correto
 
     if (taskInput.value.trim() === '') {
-        alert('A tarefa não pode ser vazia.');
+        alert('Por favor, insira uma tarefa.');
         return;
     }
 
@@ -62,6 +79,12 @@ function addTask() {
 
     if (!Array.isArray(taskLists[currentList])) {
         taskLists[currentList] = [];
+    }
+
+    // Verificar se a lista já tem 25 itens
+    if (taskLists[currentList].length >= 25) {
+        alert('A lista já atingiu o limite de 25 itens.');
+        return;
     }
 
     const task = {
@@ -91,13 +114,9 @@ function addTask() {
 
     taskInput.value = '';
     taskComplete.checked = false;
-    saveTasks();
-    renderTasks();
-}
 
-function toggleTaskInput() {
-    const taskInputContainer = document.getElementById('taskInputContainer');
-    taskInputContainer.style.display = taskInputContainer.style.display === 'none' ? 'flex' : 'none';
+    // Alternar visibilidade dos elementos
+    toggleTaskInput();
 }
 
 function toggleTaskCompletion(taskId) {
