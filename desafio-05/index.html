@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD de Tarefas</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -27,6 +27,7 @@
             <h2 id="currentListTitle">Lista Padrão</h2>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="&#xf002; Buscar Tarefa" class="fa">
+                <button class="btn" id="clearListButton" onclick="clearTaskList()">Limpar Lista</button>
             </div>
             <div class="lista-tarefas">
                 <ul id="taskList"></ul>
