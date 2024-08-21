@@ -56,7 +56,7 @@ function toggleTaskInput() {
   if (taskInputContainer.style.display === "none") {
     taskInputContainer.style.display = "block";
     addTaskButton.style.display = "none";
-    taskInput.focus(); // Focar automaticamente no campo de entrada
+    taskInput.focus();
   } else {
     taskInputContainer.style.display = "none";
     addTaskButton.style.display = "block";
@@ -66,8 +66,8 @@ function toggleTaskInput() {
 function addTask() {
   const taskInput = document.getElementById("taskInput");
   const taskComplete = document.getElementById("taskComplete");
-  const currentList = "Lista Padrão"; // Substitua pelo valor correto
-  const taskLists = {}; // Substitua pelo valor correto
+  const currentList = "Lista Padrão"; 
+  const taskLists = {}; 
 
   if (taskInput.value.trim() === "") {
     alert("Por favor, insira uma tarefa.");
@@ -83,7 +83,6 @@ function addTask() {
     taskLists[currentList] = [];
   }
 
-  // Verificar se a lista já tem 25 itens
   if (taskLists[currentList].length >= 25) {
     alert("A lista já atingiu o limite de 25 itens.");
     return;
@@ -130,7 +129,6 @@ function addTask() {
   taskInput.value = "";
   taskComplete.checked = false;
 
-  // Alternar visibilidade dos elementos
   toggleTaskInput();
 }
 
@@ -143,13 +141,11 @@ function changeList(listName) {
   currentList = listName;
   document.getElementById("currentListTitle").textContent = listName;
 
-  // Remove a classe 'active' de todas as listas
   const listItems = document.querySelectorAll(".sidebar-list ul li");
   listItems.forEach((li) => {
     li.classList.remove("active");
   });
 
-  // Adiciona a classe 'active' à lista selecionada
   const selectedListItem = Array.from(listItems).find((li) =>
     li.textContent.includes(listName)
   );
@@ -164,7 +160,7 @@ let listNameToDelete = "";
 
 function addNewList() {
   document.getElementById("newListModal").style.display = "block";
-  document.getElementById("errorMessage").style.display = "none"; // Esconde a mensagem de erro ao abrir o modal
+  document.getElementById("errorMessage").style.display = "none"; 
 }
 
 function closeModal() {
@@ -229,7 +225,7 @@ function confirmDelete() {
       break;
     }
   }
-  delete taskLists[listNameToDelete]; // Remove a lista do objeto taskLists
+  delete taskLists[listNameToDelete];
   if (currentList === listNameToDelete) {
     currentList = null;
     document.getElementById("currentListTitle").textContent = "";
@@ -240,19 +236,16 @@ function confirmDelete() {
 
 function clearTaskList() {
   taskLists[currentList] = [];
-  saveTasks(); // Salva as mudanças no armazenamento local
+  saveTasks();
   renderTasks();
 }
 
-// Filtro ao digitar no campo de busca
 document.getElementById("searchInput").oninput = () => renderTasks();
 
-// Adicionar tarefa ao pressionar "Enter"
 document.getElementById("taskInput").addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     addTask();
   }
 });
 
-// Carrega as tarefas salvas ao iniciar
 loadTasks();

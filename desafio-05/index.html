@@ -46,7 +46,7 @@
             <h2>Criar Nova Lista</h2>
             <input type="text" id="newListName" placeholder="Nome da nova lista">
             <button onclick="createNewList()">Criar</button>
-            <p id="errorMessage" style="color:red; display:none;"></p>
+            <p id="errorMessage" style="color:rgb(194, 57, 57); display:none;"></p>
         </div>
     </div>
     <div id="confirmDeleteModal" class="modal">
@@ -55,7 +55,7 @@
             <h2>Confirmar Exclusão</h2>
             <p>Tem certeza que deseja apagar a lista <span id="listNameToDelete"></span>?</p>
             <button onclick="confirmDelete()">Confirmar</button>
-            <button onclick="closeConfirmDeleteModal()">Cancelar</button>
+            <button class="cancelar" onclick="closeConfirmDeleteModal()">Cancelar</button>
         </div>
     </div>
     <script src="script.js"></script>
